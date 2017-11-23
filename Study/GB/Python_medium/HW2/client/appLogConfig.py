@@ -1,7 +1,7 @@
 import logging
 import sys
 
-fname = 'Logs/app.log'
+fname = 'app.log'
 
 format = logging.Formatter('%(levelname)-10s %(asctime)s %(message)s')
 
