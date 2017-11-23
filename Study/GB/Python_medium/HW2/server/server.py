@@ -2,25 +2,24 @@ import sys
 import socket
 import select
 from log import Log
+import config
 
+___CONFIGPATH___ = 'config.json'
 
 class Server(object):
 
     @Log()
-    def __init__(self, host, port):
-        self._host = host
-        self._port = port
+    def __init__(self, config_path = ___CONFIGPATH___):
+        conf = config.Config(config_path)
+        self._host = conf.get_IP()
+        self._port = conf.get_port()
 
         self._sock = socket.socket()
 
-        self._sock.bind((str(self._host), self._port))
+        self._sock.bind((self._host, self._port))
 
         self._clients = list()
         
-    @Log()
-    @property
-    def tcp_socket(self):
-        return self._sock
     
     @Log()
     def _read(self, read_clients):
@@ -114,6 +113,14 @@ class Server(object):
 
                 self._write(responces, write_clients, read_clients)
 
+    @Log()
+    def close_connection(self):
+        print('='*50, '\nServer disabled\n', '='*50)
+        self._sock.close()
+        sys.exit()
+        
+    
+
 if __name__ == '__main__':
-    server = Server('localhost', 8001)
+    server = Server()
     server.run()

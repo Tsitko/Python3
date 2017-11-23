@@ -4,27 +4,22 @@ import sys
 
 from log import Log
 
+import config
+
+___CONFIGPATH___ = 'config.json'
+
+___MSGSIZE___ = 1024
+
 class Client(object):
     
     @Log()
-    def __init__(self, host, port):
+    def __init__(self, config_path = ___CONFIGPATH___):
 
-        self._host = str(host)
+        conf = config.Config(config_path)
+        self._host = conf.get_IP()
+        self._port = conf.get_port()
 
-        self._port = int(port)
-
-    @Log()
-    def recv(self, size):
-        data = sock.recv(int(size)).decode('utf-8')
-        return data
-
-    @Log()
-    def form_msg(self):
-        msg = input('Eenter message: ')
-
-        return msg
-
-               
+            
 
     @Log()
     def run(self):
@@ -38,29 +33,21 @@ class Client(object):
 
             while True:
                 if _arg == 'w':
-                    msg = self.form_msg()
+                    msg = input('Eenter message: ')
                     if msg == 'exit':
                         break
 
                     sock.send(msg.encode('utf-8'))
 
                 if _arg == 'r':
-
-                    print('Ansver is: ', self.recv(1024))
+                    
+                    data = self.socket.recv(int(___MSGSIZE___)).decode('utf-8')
+                    print('Ansver is: ', data)
 
 
 if __name__ == '__main__':
 
-    client = Client('localhost', 8001)
+    client = Client()
 
     client.run()
-    # sock = socket.socket()
 
-    # sock.connect(('localhost', 8005))
-
-
-    # massage = sock.recv(1024)
-
-    # sock.close()
-
-    # print(massage)

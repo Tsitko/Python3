@@ -1,4 +1,4 @@
-from subprocess import Popen, CREATE_NEW_CONSOLE
+from subprocess import Popen, CREATE_NEW_CONSOLE, PIPE
 
 from unittest import mock, TestCase, main
 
@@ -26,6 +26,8 @@ ___TESTPORT___ = "8001"
 ___TESTCONFIG___ = "test_cofig.json"
 
 ___CONFIGPATH___ = "config.json"
+
+___LIFETIME___ = 2
 
 @Log()
 def test_func(a, b):
@@ -71,7 +73,7 @@ class ClientTestCases(TestCase):
         p_list.append(Popen('python client.py w',
                             creationflags=CREATE_NEW_CONSOLE))
 
-        sleep(2)
+        sleep(___LIFETIME___)
         poll = p_list[1].poll()
         
         for p in p_list:
@@ -87,7 +89,7 @@ class ClientTestCases(TestCase):
         p_list.append(Popen('python client.py r',
                             creationflags=CREATE_NEW_CONSOLE))
 
-        sleep(2)
+        sleep(___LIFETIME___)
         poll = p_list[1].poll()
         
         for p in p_list:
@@ -105,11 +107,12 @@ class ServerTestCases(TestCase):
     def test_server_run(self):
         p = Popen('python server.py',
                             creationflags=CREATE_NEW_CONSOLE)
-        sleep(2)
+        sleep(___LIFETIME___)
         poll = p.poll()
         p.kill()
         self.assertEqual(poll, None)
 
+    
  
 
 if __name__ == '__main__':
