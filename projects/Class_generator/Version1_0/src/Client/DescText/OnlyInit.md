@@ -1,0 +1,1 @@
+TestClass is initializing by setting test attr0 as 0 and test attr1 as 1

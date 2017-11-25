@@ -1,0 +1,161 @@
+	@Log()
+	def form_message(self, parsed_data):
+		cl = "class " + parsed_data["Class"]["Name"].title() + "(object):\n" 
+
+		init = "    def __init__(self):\n"
+		## Initialization
+		if parsed_data["Class"]["Initialization"] != [{}]:
+			for i in range(len(parsed_data["Class"]["Initialization"]["Attributes"])):
+				init += "        self._"
+				init += parsed_data["Class"]["Initialization"]["Attributes"][i] + " = " + parsed_data["Class"]["Initialization"]["Values"][i]
+				init += "\n"
+			init += "\n"
+		else: 
+			if parsed_data["Class"]["Attributes"] != []:
+				for i in range(len(parsed_data["Class"]["Attributes"])):
+					init += "        self._"
+					init += parsed_data["Class"]["Attributes"][i] + " = None\n"
+		if init == "    def __init__(self):\n":
+			init += "      pass\n\n"
+		else:
+			init += "\n"
+		## Methods
+		methods = []
+		if parsed_data["Class"]["Methods"] != [{}]:
+			for meth in parsed_data["Class"]["Methods"]:
+				method_msg = "    def " + meth["Method"] + "(self"
+				if meth["Attributes"] != []:
+					for i in range(len(meth["Attributes"])):
+						method_msg += ", " + meth["Attributes"][i]
+					method_msg += "):"
+				else:
+					method_msg += "):"
+				method_msg += "\n        pass\n\n"
+				methods.append({"Method" : method_msg})
+		message = {"Class" : cl, "Init" : init, "Methods" : methods}
+
+		return json.dumps(message).encode('utf-8')
+
+
+
+
+
+	@Log()
+	def parse_client_message(self, client_message):
+		data = json.loads(client_message)
+		description_text = data["Description text"]
+		description_config = data["Description config"]
+		return description_text, description_config
+
+
+	def pasre_client_descripton(self, client_description):
+		pass
+
+	@Log()
+	def make_lines(self, string):
+		strings=[]
+		line = ""
+		for ch in string:
+			if ch != "\n":
+				line += ch
+			else:
+				strings.append(line)
+				line = ""
+		return strings
+
+
+	@Log()
+	def clean_strings(self, description_text):
+		string = description_text
+		strings=[]
+		good_strings=[]
+		line=""
+		flag=0
+		for ch in string:
+			if ch in ___LETTERS___ or ch == "*":
+				flag = 1
+			if ch != "\n" and flag == 1:
+				if ch not in ["?", "!", ".", "-","'","\""]:
+					line += ch
+			else:
+				strings.append(line)
+				line = ""
+				flag=0
+		strings.append(line)
+		for line in strings:
+			if (line[0:2] != "**") and (line != ""):
+				good_strings.append(line.lower())
+		result_string = ""
+		for line in good_strings:
+			result_string += line + "\n"
+		return result_string
+		
+	@Log()
+	def parse_methods(self, line, description_config):
+		return [{}]
+
+	@Log()
+	def parse_initialization(self, line, description_config):
+		return [{}]
+
+	@Log()
+	def parse_attributes(self, line, description_config):
+		result = []
+		attribute_keywords = description_config.get_attribute_keywords()
+		method_keywords = description_config.get_method_keywords()
+		initialization_keywords = description_config.get_initialization_keywords()
+		is_attribute_line = 1
+		for keyword in method_keywords:
+			if keyword in line:
+				is_attribute_line = 0
+		for keyword in initialization_keywords:
+			if keyword in line:
+				is_attribute_line = 0
+		if is_attribute_line == 1:
+			for keyword in attribute_keywords:
+				if keyword in line:
+					attributes_line = line.split(keyword+" ",1)[1]
+			if ", " in attributes_line:
+				attributes_lines = attributes_line.split(", ",1)
+				for subline in attributes_lines:
+					if " and " in subline:
+						result.append(subline.split(" and ",1))
+					else:
+						result.append(subline)
+			else:
+				if " and " in attributes_line:
+					result.append(attributes_line.split(" and ",1))
+				else:
+					result.append(attributes_line)
+		return result
+
+	@Log()
+	def parse_class(self, line):
+		return line.split(" ", 1)[0]
+
+
+	@Log()
+	def make_parsed_data(self, client_message):
+		description_text, description_config = self.parse_client_message(client_message)
+		description_config = DescriptionConfig(description_config)
+		clean_description_text = self.clean_strings(description_text)
+		lines = self.make_lines(clean_description_text)
+		class_name = self.parse_class(lines[0])
+		attributes = []
+		methods = [{}]
+		initialization = [{}]
+		for line in lines:
+			atr = self.parse_attributes(line, description_config)
+			if atr != []:
+				for a in atr:
+					attributes.append(a)
+		for line in lines:
+			meth = self.parse_methods(line, description_config)
+			if meth != [{}]:
+				methods.append(meth)
+		for line in lines:
+			init = self.parse_initialization(line, description_config)
+			if init != [{}]:
+				initialization.append(init)
+		parsed_data = {"Class" : {"Name" : class_name, "Initialization" : initialization, "Methods" : methods, "Attributes" : attributes}}
+		return parsed_data

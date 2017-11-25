@@ -1,0 +1,17 @@
+{
+	"Class": "class User(object):\n",
+	"Init": "    def __init__(self):\n        self._apples = 5\n        self._oranges = 7\n",
+	"Methods": [{
+			"Method": "    def give_apples(self, apples):\n        pass\n\n"
+		},
+		{
+			"Method": "    def get_apples(self, apples):\n        pass\n\n"
+		},
+		{
+			"Method": "    def give_oranges(self, oranges):\n        pass\n\n"
+		},
+		{
+			"Method": "    def get_oranges(self, oranges):\n        pass\n\n"
+		}
+	]
+}

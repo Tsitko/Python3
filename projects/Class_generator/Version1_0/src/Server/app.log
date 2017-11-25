@@ -1,0 +1,263 @@
+INFO       2017-11-25 19:26:58,056 function: check_attr from module: data_processor with result: 1
+INFO       2017-11-25 19:26:58,056 function: check_attr from module: data_processor with result: 0
+INFO       2017-11-25 19:26:58,056 function: check_attr from module: data_processor with result: 1
+INFO       2017-11-25 19:26:58,056 function: clean_strings from module: data_processor with result: How are you Are you here
+Hi, Im Alex And you
+
+INFO       2017-11-25 19:26:58,056 function: form_message from module: data_processor with result: b'{"Class": "class User(object):\\n", "Init": "\\tdef __init__(self):\\n\\t\\tself._apples = None\\n\\n", "Methods": [{"Method": "\\tdef get_apples(self, apples):\\n\\t\\tpass\\n\\n"}, {"Method": "\\tdef give_apples(self, apples):\\n\\t\\tpass\\n\\n"}, {"Method": "\\tdef set_apples(self, apples):\\n\\t\\tself._apples = apples\\n\\n"}, {"Method": "\\tdef get_apples(self):\\n\\t\\treturn self._apples\\n\\n"}]}'
+INFO       2017-11-25 19:26:58,056 function: make_lines from module: data_processor with result: ['string1', 'string2']
+INFO       2017-11-25 19:26:58,056 function: make_lines from module: data_processor with result: ['string1', 'string2', 'string3']
+INFO       2017-11-25 19:26:58,056 function: make_name from module: data_processor with result: 
+INFO       2017-11-25 19:26:58,056 function: make_name from module: data_processor with result: name
+INFO       2017-11-25 19:26:58,056 function: make_name from module: data_processor with result: word1_word2
+INFO       2017-11-25 19:26:58,056 function: make_name from module: data_processor with result: word1_word2_word3
+INFO       2017-11-25 19:26:58,056 function: make_val from module: data_processor with result: 5
+INFO       2017-11-25 19:26:58,056 function: make_val from module: data_processor with result: 5.2
+INFO       2017-11-25 19:26:58,056 function: make_val from module: data_processor with result: 5
+INFO       2017-11-25 19:26:58,056 function: make_val from module: data_processor with result: char
+INFO       2017-11-25 19:26:58,056 function: parse_attributes from module: data_processor with result: ['apples']
+INFO       2017-11-25 19:26:58,056 function: parse_attributes from module: data_processor with result: ['apples', 'oranges', 'bananas']
+INFO       2017-11-25 19:26:58,056 function: make_val from module: data_processor with result: 1
+INFO       2017-11-25 19:26:58,056 function: make_val from module: data_processor with result: ten
+INFO       2017-11-25 19:26:58,056 function: parse_initialization from module: data_processor with result: (['apples', 'oranges'], [1, 'ten'])
+INFO       2017-11-25 19:26:58,056 function: make_val from module: data_processor with result: 1
+INFO       2017-11-25 19:26:58,056 function: make_val from module: data_processor with result: 5
+INFO       2017-11-25 19:26:58,056 function: parse_initialization from module: data_processor with result: (['apples', 'oranges'], [1, 5])
+INFO       2017-11-25 19:26:58,056 function: parse_methods from module: data_processor with result: [{'Method': 'swim', 'Attributes': []}]
+INFO       2017-11-25 19:26:58,056 function: check_attr from module: data_processor with result: 1
+INFO       2017-11-25 19:26:58,056 function: check_attr from module: data_processor with result: 1
+INFO       2017-11-25 19:26:58,056 function: check_attr from module: data_processor with result: 1
+INFO       2017-11-25 19:26:58,056 function: parse_methods from module: data_processor with result: [{'Method': 'give apples', 'Attributes': ['apples']}, {'Method': 'take apples', 'Attributes': ['apples']}, {'Method': 'eat oranges', 'Attributes': ['oranges']}]
+INFO       2017-11-25 19:27:12,236 function: _read from module: __main__ with result: {<socket.socket fd=428, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8001), raddr=('127.0.0.1', 63674)>: '{"Description text": "***Functional requirements for client***\\n\\n1. Client have name\\n2. Client have last name\\n3. Client can change name\\n4. Client can change last name\\n\\n", "Description config": {"Attribute keywords": ["have ", "must have ", "has "], "Method keywords": ["can ", "should "], "Initialization keywords": {"Attribute keywords": ["is initializing by setting ", "by default get "], "Attribute values keywords": [" as ", " equal to ", " = "]}}}'}
+INFO       2017-11-25 19:27:12,236 function: parse_client_message from module: data_processor with result: ('***Functional requirements for client***\n\n1. Client have name\n2. Client have last name\n3. Client can change name\n4. Client can change last name\n\n', {'Attribute keywords': ['have ', 'must have ', 'has '], 'Method keywords': ['can ', 'should '], 'Initialization keywords': {'Attribute keywords': ['is initializing by setting ', 'by default get '], 'Attribute values keywords': [' as ', ' equal to ', ' = ']}})
+INFO       2017-11-25 19:27:12,236 function: clean_strings from module: data_processor with result: Client have name
+Client have last name
+Client can change name
+Client can change last name
+
+INFO       2017-11-25 19:27:12,236 function: make_lines from module: data_processor with result: ['Client have name', 'Client have last name', 'Client can change name', 'Client can change last name']
+INFO       2017-11-25 19:27:12,236 function: parse_class from module: data_processor with result: Client
+INFO       2017-11-25 19:27:12,236 function: parse_attributes from module: data_processor with result: ['name']
+INFO       2017-11-25 19:27:12,236 function: parse_attributes from module: data_processor with result: ['last name']
+INFO       2017-11-25 19:27:12,236 function: parse_attributes from module: data_processor with result: []
+INFO       2017-11-25 19:27:12,236 function: parse_attributes from module: data_processor with result: []
+INFO       2017-11-25 19:27:12,236 function: make_name from module: data_processor with result: name
+INFO       2017-11-25 19:27:12,236 function: make_name from module: data_processor with result: last_name
+INFO       2017-11-25 19:27:12,236 function: parse_methods from module: data_processor with result: [{}]
+INFO       2017-11-25 19:27:12,236 function: parse_methods from module: data_processor with result: [{}]
+INFO       2017-11-25 19:27:12,236 function: check_attr from module: data_processor with result: 1
+INFO       2017-11-25 19:27:12,236 function: parse_methods from module: data_processor with result: [{'Method': 'change name', 'Attributes': ['name']}]
+INFO       2017-11-25 19:27:12,236 function: make_name from module: data_processor with result: change_name
+INFO       2017-11-25 19:27:12,236 function: make_name from module: data_processor with result: name
+INFO       2017-11-25 19:27:12,236 function: check_attr from module: data_processor with result: 0
+INFO       2017-11-25 19:27:12,236 function: check_attr from module: data_processor with result: 1
+INFO       2017-11-25 19:27:12,236 function: parse_methods from module: data_processor with result: [{'Method': 'change last name', 'Attributes': ['last name']}]
+INFO       2017-11-25 19:27:12,236 function: make_name from module: data_processor with result: change_last_name
+INFO       2017-11-25 19:27:12,236 function: make_name from module: data_processor with result: last_name
+INFO       2017-11-25 19:27:12,236 function: parse_initialization from module: data_processor with result: [{}]
+INFO       2017-11-25 19:27:12,236 function: parse_initialization from module: data_processor with result: [{}]
+INFO       2017-11-25 19:27:12,236 function: parse_initialization from module: data_processor with result: [{}]
+INFO       2017-11-25 19:27:12,236 function: parse_initialization from module: data_processor with result: [{}]
+INFO       2017-11-25 19:27:12,236 function: make_parsed_data from module: data_processor with result: {'Class': {'Name': 'Client', 'Initialization': [{}], 'Methods': [{'Method': 'change_name', 'Attributes': ['name']}, {'Method': 'change_last_name', 'Attributes': ['last_name']}], 'Attributes': ['name', 'last_name']}}
+INFO       2017-11-25 19:27:12,236 function: form_message from module: data_processor with result: b'{"Class": "class Client(object):\\n", "Init": "\\tdef __init__(self):\\n\\t\\tself._name = None\\n\\t\\tself._last_name = None\\n\\n", "Methods": [{"Method": "\\tdef change_name(self, name):\\n\\t\\tpass\\n\\n"}, {"Method": "\\tdef change_last_name(self, last_name):\\n\\t\\tpass\\n\\n"}, {"Method": "\\tdef set_name(self, name):\\n\\t\\tself._name = name\\n\\n"}, {"Method": "\\tdef get_name(self):\\n\\t\\treturn self._name\\n\\n"}, {"Method": "\\tdef set_last_name(self, last_name):\\n\\t\\tself._last_name = last_name\\n\\n"}, {"Method": "\\tdef get_last_name(self):\\n\\t\\treturn self._last_name\\n\\n"}]}'
+INFO       2017-11-25 19:27:12,236 function: _read from module: __main__ with result: {<socket.socket fd=428, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8001), raddr=('127.0.0.1', 63674)>: ''}
+INFO       2017-11-25 19:27:12,436 function: _read from module: __main__ with result: {<socket.socket fd=536, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8001), raddr=('127.0.0.1', 63675)>: '{"Description text": "***Functional requirments to message***\\n\\nMessage:\\nhave titile\\nhave body\\nhave sender, reciever and technical description\\ncan form json\\ncan form csv\\ncan save json\\ncan save csv\\nis initializing by setting title as Title, body as body text, sender=Test sender, reciever = Test reciever", "Description config": {"Attribute keywords": ["have ", "must have ", "has "], "Method keywords": ["can ", "should "], "Initialization keywords": {"Attribute keywords": ["is initializing by setting ", "by default get "], "Attribute values keywords": [" as ", " equal to ", " = "]}}}'}
+INFO       2017-11-25 19:27:12,436 function: parse_client_message from module: data_processor with result: ('***Functional requirments to message***\n\nMessage:\nhave titile\nhave body\nhave sender, reciever and technical description\ncan form json\ncan form csv\ncan save json\ncan save csv\nis initializing by setting title as Title, body as body text, sender=Test sender, reciever = Test reciever', {'Attribute keywords': ['have ', 'must have ', 'has '], 'Method keywords': ['can ', 'should '], 'Initialization keywords': {'Attribute keywords': ['is initializing by setting ', 'by default get '], 'Attribute values keywords': [' as ', ' equal to ', ' = ']}})
+INFO       2017-11-25 19:27:12,436 function: clean_strings from module: data_processor with result: Message
+have titile
+have body
+have sender, reciever and technical description
+can form json
+can form csv
+can save json
+can save csv
+is initializing by setting title as Title, body as body text, sender=Test sender, reciever = Test reciever
+
+INFO       2017-11-25 19:27:12,436 function: make_lines from module: data_processor with result: ['Message', 'have titile', 'have body', 'have sender, reciever and technical description', 'can form json', 'can form csv', 'can save json', 'can save csv', 'is initializing by setting title as Title, body as body text, sender=Test sender, reciever = Test reciever']
+INFO       2017-11-25 19:27:12,436 function: parse_class from module: data_processor with result: Message
+INFO       2017-11-25 19:27:12,436 function: parse_attributes from module: data_processor with result: []
+INFO       2017-11-25 19:27:12,436 function: parse_attributes from module: data_processor with result: ['titile']
+INFO       2017-11-25 19:27:12,436 function: parse_attributes from module: data_processor with result: ['body']
+INFO       2017-11-25 19:27:12,436 function: parse_attributes from module: data_processor with result: ['sender', 'reciever', 'technical description']
+INFO       2017-11-25 19:27:12,436 function: parse_attributes from module: data_processor with result: []
+INFO       2017-11-25 19:27:12,436 function: parse_attributes from module: data_processor with result: []
+INFO       2017-11-25 19:27:12,436 function: parse_attributes from module: data_processor with result: []
+INFO       2017-11-25 19:27:12,436 function: parse_attributes from module: data_processor with result: []
+INFO       2017-11-25 19:27:12,436 function: parse_attributes from module: data_processor with result: []
+INFO       2017-11-25 19:27:12,436 function: make_name from module: data_processor with result: titile
+INFO       2017-11-25 19:27:12,436 function: make_name from module: data_processor with result: body
+INFO       2017-11-25 19:27:12,436 function: make_name from module: data_processor with result: sender
+INFO       2017-11-25 19:27:12,436 function: make_name from module: data_processor with result: reciever
+INFO       2017-11-25 19:27:12,436 function: make_name from module: data_processor with result: technical_description
+INFO       2017-11-25 19:27:12,436 function: parse_methods from module: data_processor with result: [{}]
+INFO       2017-11-25 19:27:12,436 function: parse_methods from module: data_processor with result: [{}]
+INFO       2017-11-25 19:27:12,436 function: parse_methods from module: data_processor with result: [{}]
+INFO       2017-11-25 19:27:12,436 function: parse_methods from module: data_processor with result: [{}]
+INFO       2017-11-25 19:27:12,436 function: parse_methods from module: data_processor with result: [{'Method': 'form json', 'Attributes': []}]
+INFO       2017-11-25 19:27:12,436 function: make_name from module: data_processor with result: form_json
+INFO       2017-11-25 19:27:12,436 function: parse_methods from module: data_processor with result: [{'Method': 'form csv', 'Attributes': []}]
+INFO       2017-11-25 19:27:12,436 function: make_name from module: data_processor with result: form_csv
+INFO       2017-11-25 19:27:12,436 function: parse_methods from module: data_processor with result: [{'Method': 'save json', 'Attributes': []}]
+INFO       2017-11-25 19:27:12,436 function: make_name from module: data_processor with result: save_json
+INFO       2017-11-25 19:27:12,436 function: parse_methods from module: data_processor with result: [{'Method': 'save csv', 'Attributes': []}]
+INFO       2017-11-25 19:27:12,436 function: make_name from module: data_processor with result: save_csv
+INFO       2017-11-25 19:27:12,436 function: parse_methods from module: data_processor with result: [{}]
+INFO       2017-11-25 19:27:12,436 function: parse_initialization from module: data_processor with result: [{}]
+INFO       2017-11-25 19:27:12,436 function: parse_initialization from module: data_processor with result: [{}]
+INFO       2017-11-25 19:27:12,436 function: parse_initialization from module: data_processor with result: [{}]
+INFO       2017-11-25 19:27:12,436 function: parse_initialization from module: data_processor with result: [{}]
+INFO       2017-11-25 19:27:12,436 function: parse_initialization from module: data_processor with result: [{}]
+INFO       2017-11-25 19:27:12,436 function: parse_initialization from module: data_processor with result: [{}]
+INFO       2017-11-25 19:27:12,436 function: parse_initialization from module: data_processor with result: [{}]
+INFO       2017-11-25 19:27:12,436 function: parse_initialization from module: data_processor with result: [{}]
+INFO       2017-11-25 19:27:12,436 function: make_val from module: data_processor with result: Title
+INFO       2017-11-25 19:27:12,436 function: make_val from module: data_processor with result: body text
+INFO       2017-11-25 19:27:12,436 function: make_val from module: data_processor with result: Test reciever
+INFO       2017-11-25 19:27:12,436 function: parse_initialization from module: data_processor with result: (['title', 'body', 'reciever'], ['Title', 'body text', 'Test reciever'])
+INFO       2017-11-25 19:27:12,436 function: make_name from module: data_processor with result: title
+INFO       2017-11-25 19:27:12,436 function: make_name from module: data_processor with result: body
+INFO       2017-11-25 19:27:12,436 function: make_name from module: data_processor with result: reciever
+INFO       2017-11-25 19:27:12,436 function: make_parsed_data from module: data_processor with result: {'Class': {'Name': 'Message', 'Initialization': {'Attributes': ['title', 'body', 'reciever'], 'Values': ['Title', 'body text', 'Test reciever']}, 'Methods': [{'Method': 'form_json', 'Attributes': []}, {'Method': 'form_csv', 'Attributes': []}, {'Method': 'save_json', 'Attributes': []}, {'Method': 'save_csv', 'Attributes': []}], 'Attributes': ['titile', 'body', 'sender', 'reciever', 'technical_description']}}
+INFO       2017-11-25 19:27:12,436 function: form_message from module: data_processor with result: b'{"Class": "class Message(object):\\n", "Init": "\\tdef __init__(self):\\n\\t\\tself._title = \\"Title\\"\\n\\t\\tself._body = \\"body text\\"\\n\\t\\tself._reciever = \\"Test reciever\\"\\n\\n\\n", "Methods": [{"Method": "\\tdef form_json(self):\\n\\t\\tpass\\n\\n"}, {"Method": "\\tdef form_csv(self):\\n\\t\\tpass\\n\\n"}, {"Method": "\\tdef save_json(self):\\n\\t\\tpass\\n\\n"}, {"Method": "\\tdef save_csv(self):\\n\\t\\tpass\\n\\n"}, {"Method": "\\tdef set_titile(self, titile):\\n\\t\\tself._titile = titile\\n\\n"}, {"Method": "\\tdef get_titile(self):\\n\\t\\treturn self._titile\\n\\n"}, {"Method": "\\tdef set_body(self, body):\\n\\t\\tself._body = body\\n\\n"}, {"Method": "\\tdef get_body(self):\\n\\t\\treturn self._body\\n\\n"}, {"Method": "\\tdef set_sender(self, sender):\\n\\t\\tself._sender = sender\\n\\n"}, {"Method": "\\tdef get_sender(self):\\n\\t\\treturn self._sender\\n\\n"}, {"Method": "\\tdef set_reciever(self, reciever):\\n\\t\\tself._reciever = reciever\\n\\n"}, {"Method": "\\tdef get_reciever(self):\\n\\t\\treturn self._reciever\\n\\n"}, {"Method": "\\tdef set_technical_description(self, technical_description):\\n\\t\\tself._technical_description = technical_description\\n\\n"}, {"Method": "\\tdef get_technical_description(self):\\n\\t\\treturn self._technical_description\\n\\n"}]}'
+INFO       2017-11-25 19:27:12,452 function: _read from module: __main__ with result: {<socket.socket fd=536, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8001), raddr=('127.0.0.1', 63675)>: ''}
+INFO       2017-11-25 19:27:12,652 function: _read from module: __main__ with result: {<socket.socket fd=428, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8001), raddr=('127.0.0.1', 63676)>: '{"Description text": "TestClass have test attr0, test attr1 and test attr2\\nTestClass have test attr3, test attr4\\nTestClass have test attr5", "Description config": {"Attribute keywords": ["have ", "must have ", "has "], "Method keywords": ["can ", "should "], "Initialization keywords": {"Attribute keywords": ["is initializing by setting ", "by default get "], "Attribute values keywords": [" as ", " equal to ", " = "]}}}'}
+INFO       2017-11-25 19:27:12,652 function: parse_client_message from module: data_processor with result: ('TestClass have test attr0, test attr1 and test attr2\nTestClass have test attr3, test attr4\nTestClass have test attr5', {'Attribute keywords': ['have ', 'must have ', 'has '], 'Method keywords': ['can ', 'should '], 'Initialization keywords': {'Attribute keywords': ['is initializing by setting ', 'by default get '], 'Attribute values keywords': [' as ', ' equal to ', ' = ']}})
+INFO       2017-11-25 19:27:12,652 function: clean_strings from module: data_processor with result: TestClass have test attr0, test attr1 and test attr2
+TestClass have test attr3, test attr4
+TestClass have test attr5
+
+INFO       2017-11-25 19:27:12,652 function: make_lines from module: data_processor with result: ['TestClass have test attr0, test attr1 and test attr2', 'TestClass have test attr3, test attr4', 'TestClass have test attr5']
+INFO       2017-11-25 19:27:12,652 function: parse_class from module: data_processor with result: TestClass
+INFO       2017-11-25 19:27:12,652 function: parse_attributes from module: data_processor with result: ['test attr0', 'test attr1', 'test attr2']
+INFO       2017-11-25 19:27:12,652 function: parse_attributes from module: data_processor with result: ['test attr3', 'test attr4']
+INFO       2017-11-25 19:27:12,652 function: parse_attributes from module: data_processor with result: ['test attr5']
+INFO       2017-11-25 19:27:12,652 function: make_name from module: data_processor with result: test_attr0
+INFO       2017-11-25 19:27:12,652 function: make_name from module: data_processor with result: test_attr1
+INFO       2017-11-25 19:27:12,652 function: make_name from module: data_processor with result: test_attr2
+INFO       2017-11-25 19:27:12,652 function: make_name from module: data_processor with result: test_attr3
+INFO       2017-11-25 19:27:12,652 function: make_name from module: data_processor with result: test_attr4
+INFO       2017-11-25 19:27:12,652 function: make_name from module: data_processor with result: test_attr5
+INFO       2017-11-25 19:27:12,652 function: parse_methods from module: data_processor with result: [{}]
+INFO       2017-11-25 19:27:12,652 function: parse_methods from module: data_processor with result: [{}]
+INFO       2017-11-25 19:27:12,652 function: parse_methods from module: data_processor with result: [{}]
+INFO       2017-11-25 19:27:12,652 function: parse_initialization from module: data_processor with result: [{}]
+INFO       2017-11-25 19:27:12,652 function: parse_initialization from module: data_processor with result: [{}]
+INFO       2017-11-25 19:27:12,652 function: parse_initialization from module: data_processor with result: [{}]
+INFO       2017-11-25 19:27:12,652 function: make_parsed_data from module: data_processor with result: {'Class': {'Name': 'TestClass', 'Initialization': [{}], 'Methods': [], 'Attributes': ['test_attr0', 'test_attr1', 'test_attr2', 'test_attr3', 'test_attr4', 'test_attr5']}}
+INFO       2017-11-25 19:27:12,652 function: form_message from module: data_processor with result: b'{"Class": "class TestClass(object):\\n", "Init": "\\tdef __init__(self):\\n\\t\\tself._test_attr0 = None\\n\\t\\tself._test_attr1 = None\\n\\t\\tself._test_attr2 = None\\n\\t\\tself._test_attr3 = None\\n\\t\\tself._test_attr4 = None\\n\\t\\tself._test_attr5 = None\\n\\n", "Methods": [{"Method": "\\tdef set_test_attr0(self, test_attr0):\\n\\t\\tself._test_attr0 = test_attr0\\n\\n"}, {"Method": "\\tdef get_test_attr0(self):\\n\\t\\treturn self._test_attr0\\n\\n"}, {"Method": "\\tdef set_test_attr1(self, test_attr1):\\n\\t\\tself._test_attr1 = test_attr1\\n\\n"}, {"Method": "\\tdef get_test_attr1(self):\\n\\t\\treturn self._test_attr1\\n\\n"}, {"Method": "\\tdef set_test_attr2(self, test_attr2):\\n\\t\\tself._test_attr2 = test_attr2\\n\\n"}, {"Method": "\\tdef get_test_attr2(self):\\n\\t\\treturn self._test_attr2\\n\\n"}, {"Method": "\\tdef set_test_attr3(self, test_attr3):\\n\\t\\tself._test_attr3 = test_attr3\\n\\n"}, {"Method": "\\tdef get_test_attr3(self):\\n\\t\\treturn self._test_attr3\\n\\n"}, {"Method": "\\tdef set_test_attr4(self, test_attr4):\\n\\t\\tself._test_attr4 = test_attr4\\n\\n"}, {"Method": "\\tdef get_test_attr4(self):\\n\\t\\treturn self._test_attr4\\n\\n"}, {"Method": "\\tdef set_test_attr5(self, test_attr5):\\n\\t\\tself._test_attr5 = test_attr5\\n\\n"}, {"Method": "\\tdef get_test_attr5(self):\\n\\t\\treturn self._test_attr5\\n\\n"}]}'
+INFO       2017-11-25 19:27:12,652 function: _read from module: __main__ with result: {<socket.socket fd=428, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8001), raddr=('127.0.0.1', 63676)>: ''}
+INFO       2017-11-25 19:27:12,859 function: _read from module: __main__ with result: {<socket.socket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8001), raddr=('127.0.0.1', 63677)>: '{"Description text": "TestClass is initializing by setting test attr0 as 0 and test attr1 as 1", "Description config": {"Attribute keywords": ["have ", "must have ", "has "], "Method keywords": ["can ", "should "], "Initialization keywords": {"Attribute keywords": ["is initializing by setting ", "by default get "], "Attribute values keywords": [" as ", " equal to ", " = "]}}}'}
+INFO       2017-11-25 19:27:12,859 function: parse_client_message from module: data_processor with result: ('TestClass is initializing by setting test attr0 as 0 and test attr1 as 1', {'Attribute keywords': ['have ', 'must have ', 'has '], 'Method keywords': ['can ', 'should '], 'Initialization keywords': {'Attribute keywords': ['is initializing by setting ', 'by default get '], 'Attribute values keywords': [' as ', ' equal to ', ' = ']}})
+INFO       2017-11-25 19:27:12,859 function: clean_strings from module: data_processor with result: TestClass is initializing by setting test attr0 as 0 and test attr1 as 1
+
+INFO       2017-11-25 19:27:12,859 function: make_lines from module: data_processor with result: ['TestClass is initializing by setting test attr0 as 0 and test attr1 as 1']
+INFO       2017-11-25 19:27:12,859 function: parse_class from module: data_processor with result: TestClass
+INFO       2017-11-25 19:27:12,859 function: parse_attributes from module: data_processor with result: []
+INFO       2017-11-25 19:27:12,859 function: parse_methods from module: data_processor with result: [{}]
+INFO       2017-11-25 19:27:12,859 function: make_val from module: data_processor with result: 0
+INFO       2017-11-25 19:27:12,859 function: make_val from module: data_processor with result: 1
+INFO       2017-11-25 19:27:12,859 function: parse_initialization from module: data_processor with result: (['test attr0', 'test attr1'], [0, 1])
+INFO       2017-11-25 19:27:12,859 function: make_name from module: data_processor with result: test_attr0
+INFO       2017-11-25 19:27:12,859 function: make_name from module: data_processor with result: test_attr1
+INFO       2017-11-25 19:27:12,859 function: make_parsed_data from module: data_processor with result: {'Class': {'Name': 'TestClass', 'Initialization': {'Attributes': ['test_attr0', 'test_attr1'], 'Values': [0, 1]}, 'Methods': [], 'Attributes': []}}
+INFO       2017-11-25 19:27:12,859 function: form_message from module: data_processor with result: b'{"Class": "class TestClass(object):\\n", "Init": "\\tdef __init__(self):\\n\\t\\tself._test_attr0 = 0\\n\\t\\tself._test_attr1 = 1\\n\\n\\n", "Methods": []}'
+INFO       2017-11-25 19:27:12,859 function: _read from module: __main__ with result: {<socket.socket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8001), raddr=('127.0.0.1', 63677)>: ''}
+INFO       2017-11-25 19:27:13,060 function: _read from module: __main__ with result: {<socket.socket fd=536, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8001), raddr=('127.0.0.1', 63678)>: '{"Description text": "TestClass can test meth0, test meth1 and test meth2\\nTestClass can test meth3, test meth4\\nTestClass can test meth5", "Description config": {"Attribute keywords": ["have ", "must have ", "has "], "Method keywords": ["can ", "should "], "Initialization keywords": {"Attribute keywords": ["is initializing by setting ", "by default get "], "Attribute values keywords": [" as ", " equal to ", " = "]}}}'}
+INFO       2017-11-25 19:27:13,060 function: parse_client_message from module: data_processor with result: ('TestClass can test meth0, test meth1 and test meth2\nTestClass can test meth3, test meth4\nTestClass can test meth5', {'Attribute keywords': ['have ', 'must have ', 'has '], 'Method keywords': ['can ', 'should '], 'Initialization keywords': {'Attribute keywords': ['is initializing by setting ', 'by default get '], 'Attribute values keywords': [' as ', ' equal to ', ' = ']}})
+INFO       2017-11-25 19:27:13,060 function: clean_strings from module: data_processor with result: TestClass can test meth0, test meth1 and test meth2
+TestClass can test meth3, test meth4
+TestClass can test meth5
+
+INFO       2017-11-25 19:27:13,060 function: make_lines from module: data_processor with result: ['TestClass can test meth0, test meth1 and test meth2', 'TestClass can test meth3, test meth4', 'TestClass can test meth5']
+INFO       2017-11-25 19:27:13,060 function: parse_class from module: data_processor with result: TestClass
+INFO       2017-11-25 19:27:13,060 function: parse_attributes from module: data_processor with result: []
+INFO       2017-11-25 19:27:13,060 function: parse_attributes from module: data_processor with result: []
+INFO       2017-11-25 19:27:13,060 function: parse_attributes from module: data_processor with result: []
+INFO       2017-11-25 19:27:13,060 function: parse_methods from module: data_processor with result: [{'Method': 'test meth0', 'Attributes': []}, {'Method': 'test meth1', 'Attributes': []}, {'Method': 'test meth2', 'Attributes': []}]
+INFO       2017-11-25 19:27:13,060 function: make_name from module: data_processor with result: test_meth0
+INFO       2017-11-25 19:27:13,060 function: make_name from module: data_processor with result: test_meth1
+INFO       2017-11-25 19:27:13,060 function: make_name from module: data_processor with result: test_meth2
+INFO       2017-11-25 19:27:13,060 function: parse_methods from module: data_processor with result: [{'Method': 'test meth3', 'Attributes': []}, {'Method': 'test meth4', 'Attributes': []}]
+INFO       2017-11-25 19:27:13,060 function: make_name from module: data_processor with result: test_meth3
+INFO       2017-11-25 19:27:13,060 function: make_name from module: data_processor with result: test_meth4
+INFO       2017-11-25 19:27:13,060 function: parse_methods from module: data_processor with result: [{'Method': 'test meth5', 'Attributes': []}]
+INFO       2017-11-25 19:27:13,060 function: make_name from module: data_processor with result: test_meth5
+INFO       2017-11-25 19:27:13,060 function: parse_initialization from module: data_processor with result: [{}]
+INFO       2017-11-25 19:27:13,060 function: parse_initialization from module: data_processor with result: [{}]
+INFO       2017-11-25 19:27:13,060 function: parse_initialization from module: data_processor with result: [{}]
+INFO       2017-11-25 19:27:13,060 function: make_parsed_data from module: data_processor with result: {'Class': {'Name': 'TestClass', 'Initialization': [{}], 'Methods': [{'Method': 'test_meth0', 'Attributes': []}, {'Method': 'test_meth1', 'Attributes': []}, {'Method': 'test_meth2', 'Attributes': []}, {'Method': 'test_meth3', 'Attributes': []}, {'Method': 'test_meth4', 'Attributes': []}, {'Method': 'test_meth5', 'Attributes': []}], 'Attributes': []}}
+INFO       2017-11-25 19:27:13,060 function: form_message from module: data_processor with result: b'{"Class": "class TestClass(object):\\n", "Init": "\\tdef __init__(self):\\n\\t\\tpass\\n\\n", "Methods": [{"Method": "\\tdef test_meth0(self):\\n\\t\\tpass\\n\\n"}, {"Method": "\\tdef test_meth1(self):\\n\\t\\tpass\\n\\n"}, {"Method": "\\tdef test_meth2(self):\\n\\t\\tpass\\n\\n"}, {"Method": "\\tdef test_meth3(self):\\n\\t\\tpass\\n\\n"}, {"Method": "\\tdef test_meth4(self):\\n\\t\\tpass\\n\\n"}, {"Method": "\\tdef test_meth5(self):\\n\\t\\tpass\\n\\n"}]}'
+INFO       2017-11-25 19:27:13,060 function: _read from module: __main__ with result: {<socket.socket fd=536, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8001), raddr=('127.0.0.1', 63678)>: ''}
+INFO       2017-11-25 19:27:13,261 function: _read from module: __main__ with result: {<socket.socket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8001), raddr=('127.0.0.1', 63679)>: '{"Description text": "***Functional requirements for user***\\n\\n1. User have login\\n2. User have password\\n3. User can login to system\\n4. User can send message\\n5. User can receive message\\n7. User is initializing by setting login as test user and password as 123\\n", "Description config": {"Attribute keywords": ["have ", "must have ", "has "], "Method keywords": ["can ", "should "], "Initialization keywords": {"Attribute keywords": ["is initializing by setting ", "by default get "], "Attribute values keywords": [" as ", " equal to ", " = "]}}}'}
+INFO       2017-11-25 19:27:13,261 function: parse_client_message from module: data_processor with result: ('***Functional requirements for user***\n\n1. User have login\n2. User have password\n3. User can login to system\n4. User can send message\n5. User can receive message\n7. User is initializing by setting login as test user and password as 123\n', {'Attribute keywords': ['have ', 'must have ', 'has '], 'Method keywords': ['can ', 'should '], 'Initialization keywords': {'Attribute keywords': ['is initializing by setting ', 'by default get '], 'Attribute values keywords': [' as ', ' equal to ', ' = ']}})
+INFO       2017-11-25 19:27:13,261 function: clean_strings from module: data_processor with result: User have login
+User have password
+User can login to system
+User can send message
+User can receive message
+User is initializing by setting login as test user and password as 123
+
+INFO       2017-11-25 19:27:13,261 function: make_lines from module: data_processor with result: ['User have login', 'User have password', 'User can login to system', 'User can send message', 'User can receive message', 'User is initializing by setting login as test user and password as 123']
+INFO       2017-11-25 19:27:13,261 function: parse_class from module: data_processor with result: User
+INFO       2017-11-25 19:27:13,261 function: parse_attributes from module: data_processor with result: ['login']
+INFO       2017-11-25 19:27:13,261 function: parse_attributes from module: data_processor with result: ['password']
+INFO       2017-11-25 19:27:13,261 function: parse_attributes from module: data_processor with result: []
+INFO       2017-11-25 19:27:13,261 function: parse_attributes from module: data_processor with result: []
+INFO       2017-11-25 19:27:13,261 function: parse_attributes from module: data_processor with result: []
+INFO       2017-11-25 19:27:13,261 function: parse_attributes from module: data_processor with result: []
+INFO       2017-11-25 19:27:13,261 function: make_name from module: data_processor with result: login
+INFO       2017-11-25 19:27:13,261 function: make_name from module: data_processor with result: password
+INFO       2017-11-25 19:27:13,261 function: parse_methods from module: data_processor with result: [{}]
+INFO       2017-11-25 19:27:13,261 function: parse_methods from module: data_processor with result: [{}]
+INFO       2017-11-25 19:27:13,261 function: check_attr from module: data_processor with result: 1
+INFO       2017-11-25 19:27:13,261 function: parse_methods from module: data_processor with result: [{'Method': 'login to system', 'Attributes': ['login']}]
+INFO       2017-11-25 19:27:13,261 function: make_name from module: data_processor with result: login_to_system
+INFO       2017-11-25 19:27:13,261 function: make_name from module: data_processor with result: login
+INFO       2017-11-25 19:27:13,261 function: parse_methods from module: data_processor with result: [{'Method': 'send message', 'Attributes': []}]
+INFO       2017-11-25 19:27:13,261 function: make_name from module: data_processor with result: send_message
+INFO       2017-11-25 19:27:13,261 function: parse_methods from module: data_processor with result: [{'Method': 'receive message', 'Attributes': []}]
+INFO       2017-11-25 19:27:13,261 function: make_name from module: data_processor with result: receive_message
+INFO       2017-11-25 19:27:13,261 function: parse_methods from module: data_processor with result: [{}]
+INFO       2017-11-25 19:27:13,261 function: parse_initialization from module: data_processor with result: [{}]
+INFO       2017-11-25 19:27:13,261 function: parse_initialization from module: data_processor with result: [{}]
+INFO       2017-11-25 19:27:13,261 function: parse_initialization from module: data_processor with result: [{}]
+INFO       2017-11-25 19:27:13,261 function: parse_initialization from module: data_processor with result: [{}]
+INFO       2017-11-25 19:27:13,261 function: parse_initialization from module: data_processor with result: [{}]
+INFO       2017-11-25 19:27:13,261 function: make_val from module: data_processor with result: test user
+INFO       2017-11-25 19:27:13,261 function: make_val from module: data_processor with result: 123
+INFO       2017-11-25 19:27:13,261 function: parse_initialization from module: data_processor with result: (['login', 'password'], ['test user', 123])
+INFO       2017-11-25 19:27:13,261 function: make_name from module: data_processor with result: login
+INFO       2017-11-25 19:27:13,261 function: make_name from module: data_processor with result: password
+INFO       2017-11-25 19:27:13,261 function: make_parsed_data from module: data_processor with result: {'Class': {'Name': 'User', 'Initialization': {'Attributes': ['login', 'password'], 'Values': ['test user', 123]}, 'Methods': [{'Method': 'login_to_system', 'Attributes': ['login']}, {'Method': 'send_message', 'Attributes': []}, {'Method': 'receive_message', 'Attributes': []}], 'Attributes': ['login', 'password']}}
+INFO       2017-11-25 19:27:13,261 function: form_message from module: data_processor with result: b'{"Class": "class User(object):\\n", "Init": "\\tdef __init__(self):\\n\\t\\tself._login = \\"test user\\"\\n\\t\\tself._password = 123\\n\\n\\n", "Methods": [{"Method": "\\tdef login_to_system(self, login):\\n\\t\\tpass\\n\\n"}, {"Method": "\\tdef send_message(self):\\n\\t\\tpass\\n\\n"}, {"Method": "\\tdef receive_message(self):\\n\\t\\tpass\\n\\n"}, {"Method": "\\tdef set_login(self, login):\\n\\t\\tself._login = login\\n\\n"}, {"Method": "\\tdef get_login(self):\\n\\t\\treturn self._login\\n\\n"}, {"Method": "\\tdef set_password(self, password):\\n\\t\\tself._password = password\\n\\n"}, {"Method": "\\tdef get_password(self):\\n\\t\\treturn self._password\\n\\n"}]}'
+INFO       2017-11-25 19:27:13,462 function: _read from module: __main__ with result: {<socket.socket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8001), raddr=('127.0.0.1', 63679)>: ''}
+INFO       2017-11-25 19:27:20,474 function: check_attr from module: data_processor with result: 1
+INFO       2017-11-25 19:27:20,474 function: check_attr from module: data_processor with result: 0
+INFO       2017-11-25 19:27:20,474 function: check_attr from module: data_processor with result: 1
+INFO       2017-11-25 19:27:20,474 function: clean_strings from module: data_processor with result: How are you Are you here
+Hi, Im Alex And you
+
+INFO       2017-11-25 19:27:20,474 function: form_message from module: data_processor with result: b'{"Class": "class User(object):\\n", "Init": "\\tdef __init__(self):\\n\\t\\tself._apples = None\\n\\n", "Methods": [{"Method": "\\tdef get_apples(self, apples):\\n\\t\\tpass\\n\\n"}, {"Method": "\\tdef give_apples(self, apples):\\n\\t\\tpass\\n\\n"}, {"Method": "\\tdef set_apples(self, apples):\\n\\t\\tself._apples = apples\\n\\n"}, {"Method": "\\tdef get_apples(self):\\n\\t\\treturn self._apples\\n\\n"}]}'
+INFO       2017-11-25 19:27:20,474 function: make_lines from module: data_processor with result: ['string1', 'string2']
+INFO       2017-11-25 19:27:20,474 function: make_lines from module: data_processor with result: ['string1', 'string2', 'string3']
+INFO       2017-11-25 19:27:20,474 function: make_name from module: data_processor with result: 
+INFO       2017-11-25 19:27:20,474 function: make_name from module: data_processor with result: name
+INFO       2017-11-25 19:27:20,474 function: make_name from module: data_processor with result: word1_word2
+INFO       2017-11-25 19:27:20,474 function: make_name from module: data_processor with result: word1_word2_word3
+INFO       2017-11-25 19:27:20,474 function: make_val from module: data_processor with result: 5
+INFO       2017-11-25 19:27:20,474 function: make_val from module: data_processor with result: 5.2
+INFO       2017-11-25 19:27:20,474 function: make_val from module: data_processor with result: 5
+INFO       2017-11-25 19:27:20,474 function: make_val from module: data_processor with result: char
+INFO       2017-11-25 19:27:20,474 function: parse_attributes from module: data_processor with result: ['apples']
+INFO       2017-11-25 19:27:20,474 function: parse_attributes from module: data_processor with result: ['apples', 'oranges', 'bananas']
+INFO       2017-11-25 19:27:20,474 function: make_val from module: data_processor with result: 1
+INFO       2017-11-25 19:27:20,474 function: make_val from module: data_processor with result: ten
+INFO       2017-11-25 19:27:20,474 function: parse_initialization from module: data_processor with result: (['apples', 'oranges'], [1, 'ten'])
+INFO       2017-11-25 19:27:20,474 function: make_val from module: data_processor with result: 1
+INFO       2017-11-25 19:27:20,474 function: make_val from module: data_processor with result: 5
+INFO       2017-11-25 19:27:20,474 function: parse_initialization from module: data_processor with result: (['apples', 'oranges'], [1, 5])
+INFO       2017-11-25 19:27:20,474 function: parse_methods from module: data_processor with result: [{'Method': 'swim', 'Attributes': []}]
+INFO       2017-11-25 19:27:20,474 function: check_attr from module: data_processor with result: 1
+INFO       2017-11-25 19:27:20,474 function: check_attr from module: data_processor with result: 1
+INFO       2017-11-25 19:27:20,474 function: check_attr from module: data_processor with result: 1
+INFO       2017-11-25 19:27:20,474 function: parse_methods from module: data_processor with result: [{'Method': 'give apples', 'Attributes': ['apples']}, {'Method': 'take apples', 'Attributes': ['apples']}, {'Method': 'eat oranges', 'Attributes': ['oranges']}]

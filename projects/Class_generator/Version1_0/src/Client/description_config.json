@@ -1,0 +1,8 @@
+{
+	"Attribute keywords": ["have ", "must have ", "has "],
+	"Method keywords": ["can ", "should "],
+	"Initialization keywords": {
+		"Attribute keywords": ["is initializing by setting ", "by default get "],
+		"Attribute values keywords": [" as ", " equal to ", " = "]
+	}
+}
