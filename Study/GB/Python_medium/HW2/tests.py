@@ -1,4 +1,4 @@
-from subprocess import Popen, CREATE_NEW_CONSOLE, PIPE
+from subprocess import Popen, CREATE_NEW_CONSOLE
 
 from unittest import mock, TestCase, main
 
@@ -26,8 +26,6 @@ ___TESTPORT___ = "8001"
 ___TESTCONFIG___ = "test_cofig.json"
 
 ___CONFIGPATH___ = "config.json"
-
-___LIFETIME___ = 2
 
 @Log()
 def test_func(a, b):
@@ -64,6 +62,19 @@ class ClientTestCases(TestCase):
         test_client = client.Client(config_path=___TESTCONFIG___)
         self.assertEqual(test_client._host, conf.get_IP())
         self.assertEqual(test_client._port, conf.get_port())
+        self.assertEqual(test_client._name, None)
+
+    def test_client_set_name(self):
+        test_client = client.Client(config_path=___TESTCONFIG___)
+        name = "Test name"
+        test_client.set_name(name)
+        self.assertEqual(test_client._name, name)
+
+    def test_client_get_name(self):
+        test_client = client.Client(config_path=___TESTCONFIG___)
+        name = "Test name"
+        test_client.set_name(name)
+        self.assertEqual(test_client.get_name(), name)
         
 
     def test_client_run_w(self):
@@ -73,7 +84,7 @@ class ClientTestCases(TestCase):
         p_list.append(Popen('python client.py w',
                             creationflags=CREATE_NEW_CONSOLE))
 
-        sleep(___LIFETIME___)
+        sleep(2)
         poll = p_list[1].poll()
         
         for p in p_list:
@@ -89,7 +100,7 @@ class ClientTestCases(TestCase):
         p_list.append(Popen('python client.py r',
                             creationflags=CREATE_NEW_CONSOLE))
 
-        sleep(___LIFETIME___)
+        sleep(2)
         poll = p_list[1].poll()
         
         for p in p_list:
@@ -107,12 +118,11 @@ class ServerTestCases(TestCase):
     def test_server_run(self):
         p = Popen('python server.py',
                             creationflags=CREATE_NEW_CONSOLE)
-        sleep(___LIFETIME___)
+        sleep(2)
         poll = p.poll()
         p.kill()
         self.assertEqual(poll, None)
 
-    
  
 
 if __name__ == '__main__':
