@@ -33,7 +33,14 @@
 
 * Client config have host, port, name, login and password
 * Client config can get and set host, port, name, login and password
-* Config is initializing from json file. It sets host, port, name, login and password from that file
+* Client config is initializing from json file. It sets host, port, name, login and password from that file
+
+**Server config (child of Config)**
+
+* Server config have host, port, DB_server, DB_user, DB_user_password, DB_name
+* Server config can get and set host, port, DB_server, DB_user, DB_user_password, DB_name
+* Server config is initializing from json file. It sets host, port, DB_server, DB_user, DB_user_password, DB_name
+
 
 **Server client**
 
