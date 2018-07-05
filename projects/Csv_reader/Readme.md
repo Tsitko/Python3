@@ -5,18 +5,18 @@
 Class Table which is reading csv as pandas DataFrame and transforms it into most popular scv format.  
 For example, it transforms this:  
 
-ColumnNumberOne/ColumnNumberTwo/ColumnNumberThree
-01 12 2017/Some Text1/10
-15 12 2017/Some Text2/100 000
-20 12 2017/Some Text1/10,02
+ColumnNumberOne/ColumnNumberTwo/ColumnNumberThree  
+01 12 2017/Some Text1/10  
+15 12 2017/Some Text2/100 000  
+20 12 2017/Some Text1/10,02  
 21 12 2017/Some Text2/100 000,001
 
 Into this:  
 
-ColumnNumberOne,ColumnNumberTwo,ColumnNumberThree
-2017-12-01,Some Text1,10
-2017-12-15,Some Text2,100000
-2017-12-20,Some Text1,10.02
+ColumnNumberOne,ColumnNumberTwo,ColumnNumberThree  
+2017-12-01,Some Text1,10  
+2017-12-15,Some Text2,100000  
+2017-12-20,Some Text1,10.02  
 2017-12-21,Some Text2,100000.001
 
 So by using that class you can always be shure about data types and formats of your columns
