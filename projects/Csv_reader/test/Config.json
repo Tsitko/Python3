@@ -1,0 +1,7 @@
+{
+	"NAs" : ["NA", "Na", "na", "NULL", "Null", "null"],
+	"NaNs" : ["NaN", "Nan", "nan"],
+	"DateFormats" : ["%Y/%m/%d %H:%M:%S", "%Y-%m-%d %H:%M:%S", "%Y %m %d %H:%M:%S", "%d/%m/%Y %H:%M:%S", "%d-%m-%Y %H:%M:%S", "%d %m %Y %H:%M:%S", "%m/%d/%Y %H:%M:%S", "%m-%d-%Y %H:%M:%S","%m %d %Y %H:%M:%S", "%Y/%d/%m %H:%M:%S", "%Y-%d-%m %H:%M:%S","%Y %d %m %H:%M:%S" ],
+	"CsvSeparators" : [",", ";", "\t", "\/", "\\", " ", "."],
+	"NumberSeparators" : [".", ","]
+}
