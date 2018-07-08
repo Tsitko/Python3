@@ -6,7 +6,7 @@ Class Table which is reading csv as pandas DataFrame and transforms it into most
 For example, it transforms this:  
 
 ColumnNumberOne/ColumnNumberTwo/ColumnNumberThree  
-01 12 2017/Some Text1/10  
+01 12 2017 01:10:01/Some Text1/10  
 15 12 2017/Some Text2/100 000  
 20 12 2017/Some Text1/10,02  
 21 12 2017/Some Text2/100 000,001
@@ -14,10 +14,11 @@ ColumnNumberOne/ColumnNumberTwo/ColumnNumberThree
 Into this:  
 
 ColumnNumberOne,ColumnNumberTwo,ColumnNumberThree  
-2017-12-01,Some Text1,10  
-2017-12-15,Some Text2,100000  
-2017-12-20,Some Text1,10.02  
-2017-12-21,Some Text2,100000.001
+2017-12-01 01:10:01,Some Text1,10  
+2017-12-15 00:00:00,Some Text2,100000  
+2017-12-20 00:00:00,Some Text1,10.02  
+2017-12-21 00:00:00,Some Text2,100000.001
+
 
 So by using that class you can always be shure about data types and formats of your columns
 
@@ -33,7 +34,7 @@ _pandas and numpy_ - because that project is a part of my machineLearning framew
 
 import Table from Table
 
-Csv = Table.load_Table('initial_csv.csv')
-Csv.save_csv('final_csv.csv')
+Tab = Table("initial.csv")
+Tab.save_csv("final.csv")
 
 ```
